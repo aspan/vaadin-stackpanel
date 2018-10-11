@@ -1,5 +1,6 @@
 package org.vaadin.addons.stackpanel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,19 +17,19 @@ import com.vaadin.ui.Panel;
 @SuppressWarnings("serial")
 public class StackPanel extends AbstractExtension {
 
-    public interface ToggleListener {
+    public interface ToggleListener extends Serializable {
         void toggleClick(StackPanel source);
     }
 
-    public interface ToggleDisabledClickListener {
+    public interface ToggleDisabledClickListener extends Serializable {
         void toggleDisabledClick(StackPanel source);
     }
 
-    public interface FocusListener {
+    public interface FocusListener extends Serializable {
         void focus(StackPanel source);
     }
 
-    public interface BlurListener {
+    public interface BlurListener extends Serializable {
         void blur(StackPanel source);
     }
 

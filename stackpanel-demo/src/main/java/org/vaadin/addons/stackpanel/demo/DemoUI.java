@@ -58,15 +58,15 @@ public class DemoUI extends UI {
         SectionPanel section4 = new SectionPanel("StackPanel with toggle listener");
         StackPanel panel4 = StackPanel.extend(section4);
         panel4.addToggleListener(new ToggleListener() {
-
             @Override
             public void toggleClick(StackPanel source) {
-                Notification.show("Toggle Listener fired!");
+                System.out.println("Click!");
             }
         });
         panel4.setTabIndex(0);
         panel4.close();
         panel4.addFocusListener((s) -> {
+            System.out.println("Focus!");
             if (!s.isOpen()) {
                 s.open();
                 section4.getFirstName().focus();
